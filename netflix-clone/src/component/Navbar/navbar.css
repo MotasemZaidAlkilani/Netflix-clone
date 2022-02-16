@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    background-color: aliceblue;
+    height: 50px;;
+    justify-content: space-between;
+    align-items: center;
+}
+.home,.fav{
+    padding: 10px;
+    text-decoration: none;
+}
