@@ -1,10 +1,12 @@
 import { Button, Container, Row, Card, Col } from "react-bootstrap";
+import axios from 'axios';
 import { useState } from "react";
 import Modalmovie  from "../ModalMovie/Modalmovie";
 function Movie(props) {
     const [cardInfo, setCardInfo] = useState({});
     const [show,setShow] = useState(false);
 
+    
     const handleClose = ()=>setShow(false);
     return (
         <>
@@ -23,10 +25,10 @@ function Movie(props) {
                                 <Card className="div-card-overview">{props.data.overview}</Card>
                                 <div>
                                     <Button className="div-card-button" variant='primary' onClick={()=>{
-                                        setCardInfo(props.data);
-                                        setShow(true);
+                                      setCardInfo(props.data);
+                                      setShow(true);
                                     }}>add to favourite</Button>
-
+                                     
                                 </div>
                             </Card.Body>
                         </Card>
